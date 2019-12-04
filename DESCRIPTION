@@ -2,10 +2,14 @@ Package: SLUcolors
 Type: Package
 Title: SLU color palettes
 Version: 0.1.0
-Author: Who wrote it
+Author: Anders Kagervall (anders.kagervall@slu.se)
 Maintainer: The package maintainer <anders.kagervall@slu.se>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: SLUcolors provides an easy way to access the officialy
+    defined colors that should be used when you create communication
+    (PowerPoint, fact sheets, etc.) in SLU. This first alpha-version
+    provides a function  SLUpalette(name) that will return a color
+    palette. The parameter "name" must be one of the strings "red",
+    "green", "blue", "yellow" or "all".
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
