@@ -1,8 +1,28 @@
 palette_list  <- c("all", "red", "green", "blue", "yellow", "grey")
 names(palette_list) <- palette_list
 
-SLUpalette  <- function(name) {
-  switch(name,
+#' Get different variants of color palettes containing official SLU colors
+#'
+#' @param name the name of desired color palette
+#'
+#' @return
+#' a named vector of color specifications.
+#' @export
+#'
+#' @examples
+#'
+SLUpalette <- function(palette) {
+  UseMethod("SLUpalette")
+}
+
+SLUpalette.default <- function(palette) {
+  stop('Parameter "palette" must be character or numeric')
+}
+SLUpalette.character  <- function(palette) {
+  if (!palette %in% palette_list) {
+    stop('Unknown color palette "',name, '" must be one of ', paste(palette_list, collape = " "))
+  }
+  switch(palette,
          all = c(SLUpalette("red"), SLUpalette("green"), SLUpalette("blue"),
                  SLUpalette("yellow"), SLUpalette("grey")),
          red = rgb(red = c(251, 255, 206, 103, 80),
@@ -36,4 +56,12 @@ SLUpalette  <- function(name) {
                     names = c("Snö", "Fjäder", "Glimmer", "Betong",
                               "Titan", "Kol"))
   )
+}
+
+SLUpalette.numeric <- function(palette) {
+  if (!is.integer(palette) & (palette < 1 | palette > 5) ) {
+    stop('Numeric palette must be an integer between 1 and 5')
+  }
+  pall <- SLUpalette.character("all")
+  pall[seq(from = palette, by = 5, length.out = 5)]
 }
