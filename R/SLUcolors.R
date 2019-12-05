@@ -3,13 +3,22 @@ names(palette_list) <- palette_list
 
 #' Get different variants of color palettes containing official SLU colors
 #'
-#' @param name the name of desired color palette
+#' \code{SLUpalette(palette)} returns different variants of the official SLU color palette.
+#'
+#'
+#' @param character or numeric defining the desired color palette
 #'
 #' @return
 #' a named vector of color specifications.
 #' @export
 #'
 #' @examples
+#' opal <- palette(SLUpalette("red")) # set default palette to SLU "red" and save original palette
+#' plot(Sepal.Width ~ Sepal.Length, data = iris, pch = 16, col = Species)
+#' palette(SLUpalette("blue")) # set default palette to SLU "blue"
+#' plot(Sepal.Width ~ Sepal.Length, data = iris, pch = 16, col = Species)
+#' palette(opal)
+#
 #'
 SLUpalette <- function(palette) {
   UseMethod("SLUpalette")
