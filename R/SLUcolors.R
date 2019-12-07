@@ -6,7 +6,7 @@ names(palette_list) <- palette_list
 #' \code{SLUpalette(palette)} returns different variants of the official SLU color palette.
 #'
 #'
-#' @param character or numeric defining the desired color palette
+#' @param patette character or numeric defining the desired color palette
 #'
 #' @return
 #' a named vector of color specifications.
@@ -29,7 +29,7 @@ SLUpalette.default <- function(palette) {
 }
 SLUpalette.character  <- function(palette) {
   if (!palette %in% palette_list) {
-    stop('Unknown color palette "',name, '" must be one of ', paste(palette_list, collape = " "))
+    stop('Unknown color palette "',palette, '" must be one of ', paste(palette_list, collape = " "))
   }
   switch(palette,
          all = c(SLUpalette("red"), SLUpalette("green"), SLUpalette("blue"),
