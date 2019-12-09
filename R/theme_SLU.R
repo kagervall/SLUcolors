@@ -1,5 +1,5 @@
-SLUtheme <- function(palette, dark = TRUE) {
-  if (!require(ggplot22)) {
+theme_SLU <- function(palette, dark = TRUE) {
+  if (!require(ggplot2)) {
     stop("ggplot2 required for SLUtheme to work")
   }
   cols  <- SLUcolors::SLUpalette(palette)
@@ -14,7 +14,8 @@ SLUtheme <- function(palette, dark = TRUE) {
         axis.text = element_text(color = greys[2]),
         axis.ticks = element_line(color = greys[2]),
         panel.grid.minor = element_blank(),
-        panel.border = element_blank(),
-        panel.background = element_rect(fill = cols[3]),
+        panel.border = element_rect(color = greys[1], fill = NA),
+        panel.background = element_rect(fill = cols[5]),
         panel.grid = element_line(color = NA))
 }
+#p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length)) +  labs(title = "Sepal plot") + geom_point()
