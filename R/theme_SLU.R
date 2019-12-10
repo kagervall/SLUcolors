@@ -1,10 +1,10 @@
 theme_SLU <- function(palette, dark = TRUE) {
-  if (!require(ggplot2)) {
-    stop("ggplot2 required for SLUtheme to work")
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop("ggplot2 required for theme_SLU to work",   call. = FALSE)
   }
   cols  <- SLUcolors::SLUpalette(palette)
   greys  <- SLUcolors::SLUpalette("grey")
-  if (!dark) {
+  if (dark) {
     cols  <- rev(cols)
     greys  <- rev(greys)
   }
