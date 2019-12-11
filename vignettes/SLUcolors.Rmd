@@ -61,10 +61,30 @@ swatchplot("Deep 1" = row1,
 Here are some simple examples of how to use the SLU colors in base plot.
 ```{r example2}
 h <- matrix(data = 1:9, nrow = 3, byrow = TRUE)
-# Bar plot using the green palette for the bars. Reverse te palette to get the lightest colots 
+# Bar plot using the green palette for the bars. Reverse the palette to get the lightest colors 
 barplot(h, col = rev(SLUpalette("green")), main = "Palette green")
 
 # Bar plot using row 5 (light colors) from the palette. 
 barplot(h, col = SLUpalette(5), main = "Row 5 (Light)")
+```
+
+# Theme for ggplot2
+The function theme_SLU(palette, dark) returns a theme that can be applied to a plot created with ggplot2. 
+The goal of the theme is to get a plot that blends well with the official SLU templates for PowerPoint. Feedback on the design is welcome as I am a decent programmer and a lousy designer.
+
+```{r example3}
+library(ggplot2)
+p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length))
+  
+p1 + labs(title = "Red on green") +
+  geom_point(color = SLUpalette("red")["Hallon"]) +
+  theme_SLU("green")
+
+cols <- SLUpalette(3)
+names(cols) <- NULL # Must remove names for scale_color_manual() 
+p1 +  labs(title = "Light blue, grouped by species") +
+  geom_point(aes(colour = Species)) +
+  scale_color_manual(values = cols) +
+  theme_SLU("blue", dark = FALSE)
 ```
 

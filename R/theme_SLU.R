@@ -13,9 +13,10 @@ theme_SLU <- function(palette, dark = TRUE) {
         plot.title = element_text(hjust = 0.5), #argin = margin(b = -3), size = 9.6, face = "bold"),
         axis.text = element_text(color = greys[2]),
         axis.ticks = element_line(color = greys[2]),
-        panel.grid.minor = element_blank(),
+        panel.grid.minor = element_line(color = NA),
         panel.border = element_rect(color = greys[1], fill = NA),
-        panel.background = element_rect(fill = cols[5]),
+        panel.background = element_blank(), #element_rect(fill = cols[5]),
         panel.grid = element_line(color = NA))
 }
+
 #p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length)) +  labs(title = "Sepal plot") + geom_point()
