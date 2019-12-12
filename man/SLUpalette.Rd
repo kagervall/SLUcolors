@@ -4,7 +4,7 @@
 \alias{SLUpalette}
 \title{Get different variants of color palettes containing official SLU colors}
 \usage{
-SLUpalette(palette)
+SLUpalette(palette, color_names = TRUE)
 }
 \arguments{
 \item{patette}{character or numeric defining the desired color palette}
