@@ -6,7 +6,8 @@ names(palette_list) <- palette_list
 #' \code{SLUpalette(palette)} returns different variants of the official SLU color palette.
 #'
 #'
-#' @param patette character or numeric defining the desired color palette
+#' @param palette character or numeric defining the desired color palette
+#' @param color_names logical return named vector or not. Default TRUE
 #'
 #' @return
 #' a named vector of color specifications.

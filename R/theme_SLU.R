@@ -1,7 +1,7 @@
 #' SLU theme for ggplot2
 #'
-#' @param palette
-#' @param dark
+#' @param palette character or numeric defining the desired color palette
+#' @param dark logical return theme for dark or light color scheme. Default dark.
 #'
 #' @return
 #' @export
