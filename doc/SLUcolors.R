@@ -1,16 +1,16 @@
-## ---- include = FALSE---------------------------------------------------------
+## ---- include = FALSE----------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 
-## ----install, eval=FALSE------------------------------------------------------
+## ----install, eval=FALSE-------------------------------------------------
 #  if (!require(remotes)) {
 #    install.packages(remotes)
 #  }
 #  remotes::install_github("kagervall/SLUcolors")
 
-## ----example1-----------------------------------------------------------------
+## ----example1------------------------------------------------------------
 library(colorspace) # For swatchplot()
 library(SLUcolors)
 
@@ -31,7 +31,7 @@ swatchplot("Deep 1" = row1,
 
 
 
-## ----example2-----------------------------------------------------------------
+## ----example2------------------------------------------------------------
 h <- matrix(data = 1:9, nrow = 3, byrow = TRUE)
 # Bar plot using the green palette for the bars. Reverse the palette to get the lightest colors 
 barplot(h, col = rev(SLUpalette("green")), main = "Palette green")
@@ -39,7 +39,7 @@ barplot(h, col = rev(SLUpalette("green")), main = "Palette green")
 # Bar plot using row 5 (light colors) from the palette. 
 barplot(h, col = SLUpalette(5), main = "Row 5 (Light)")
 
-## ----example3-----------------------------------------------------------------
+## ----example3------------------------------------------------------------
 library(ggplot2)
 p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length))
   

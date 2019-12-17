@@ -2,8 +2,8 @@
 ---
 title: "SLUcolors"
 output:
-  rmarkdown::html_vignette: default
   pdf_document: default
+  rmarkdown::html_vignette: default
 vignette: >
   %\VignetteIndexEntry{SLUcolors}
   %\VignetteEncoding{UTF-8}

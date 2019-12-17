@@ -1,10 +1,13 @@
+
 ---
 title: "SLUcolors"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette: default
+  pdf_document: default
 vignette: >
   %\VignetteIndexEntry{SLUcolors}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r, include = FALSE}
@@ -14,7 +17,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-SLUcolors is a R a package that tries to make the use of officialy defined SLU-colors in R. The use of
+SLUcolors is a R a package that tries to make the use of officialy defined SLU-colors in R easy. The use of
 the SLU color palette can give a coherant SLU-look presentations, fact-sheets and other communication,
 especially combined with official templates for PowerPoint etc. For more info see [https://internt.slu.se/en/support-services/administrative-support/communication/brand-guidelines/visual-identity/slu-colours/palette/](https://internt.slu.se/en/support-services/administrative-support/communication/brand-guidelines/visual-identity/slu-colours/palette/)
 
