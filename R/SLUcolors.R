@@ -9,8 +9,8 @@ names(palette_list) <- palette_list
 #' @param palette character or numeric defining the desired color palette
 #' @param color_names logical return named vector or not. Default TRUE
 #'
-#' @return
-#' a named vector of color specifications.
+#' @return a named vector of color specifications.
+#'
 #' @export
 #'
 #' @examples

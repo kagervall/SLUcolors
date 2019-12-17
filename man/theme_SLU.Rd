@@ -7,7 +7,12 @@
 theme_SLU(palette, dark = TRUE)
 }
 \arguments{
-\item{dark}{}
+\item{palette}{character or numeric defining the desired color palette}
+
+\item{dark}{logical return theme for dark or light color scheme. Default dark.}
+}
+\value{
+a ggplot theme using SLU colors
 }
 \description{
 SLU theme for ggplot2

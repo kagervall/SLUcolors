@@ -7,7 +7,9 @@
 SLUpalette(palette, color_names = TRUE)
 }
 \arguments{
-\item{patette}{character or numeric defining the desired color palette}
+\item{palette}{character or numeric defining the desired color palette}
+
+\item{color_names}{logical return named vector or not. Default TRUE}
 }
 \value{
 a named vector of color specifications.
