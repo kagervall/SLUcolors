@@ -1,7 +1,7 @@
 Package: SLUcolors
 Type: Package
 Title: SLU Color Palettes
-Version: 0.1.0.9001
+Version: 0.1.0.9002
 Author: Anders Kagervall
 Maintainer: Anders Kagervall <anders.kagervall@slu.se>
 Description: SLUcolors provides an easy way to access the officialy
