@@ -16,7 +16,7 @@ library(SLUcolors)
 
 # Get colomn from the palette = "Shades of color"
 reds <- SLUpalette("red") # Get a palette with 5 "Shades of red"
-reds
+reds # The retuned value is a (by default) named vector.
 # Get rows from palette 
 row1 <- SLUpalette(1)
 row2 <- SLUpalette(2)
@@ -39,7 +39,7 @@ barplot(h, col = rev(SLUpalette("green")), main = "Palette green")
 # Bar plot using row 5 (light colors) from the palette. 
 barplot(h, col = SLUpalette(5), main = "Row 5 (Light)")
 
-## ----example3------------------------------------------------------------
+## ----example3, fig.height=3, fig.width=5---------------------------------
 library(ggplot2)
 p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length))
   

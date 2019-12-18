@@ -35,8 +35,7 @@ The function *SLUpalette()* is used to get variants of the SLU color palette (or
 A color palette is a vector of color codes that can be used in other functions. The vector returned by
 SLUpalette() is named using the swedish names of the color as defined by "Communication & marketing".
 SLUpalette(palette) takes one parameter, palette, that can be either a character or an integer. When palette
-is a character the allowed strings are: "red", "green", "blue", "yellow", "grey" or "all", when palette
-is an integer it can take the values 1 to 5.
+is a character the allowed strings are: "red", "green", "blue", "yellow", "grey" or "all", this will return columns from the official palette. When palette is an integer it can take the values 1 to 5, this will return rows from the official palette. 
 
 ```{r example1}
 library(colorspace) # For swatchplot()
@@ -44,7 +43,7 @@ library(SLUcolors)
 
 # Get colomn from the palette = "Shades of color"
 reds <- SLUpalette("red") # Get a palette with 5 "Shades of red"
-reds
+reds # The retuned value is a (by default) named vector.
 # Get rows from palette 
 row1 <- SLUpalette(1)
 row2 <- SLUpalette(2)
@@ -72,10 +71,10 @@ barplot(h, col = SLUpalette(5), main = "Row 5 (Light)")
 ```
 
 # Theme for ggplot2
-The function theme_SLU(palette, dark) returns a theme that can be applied to a plot created with ggplot2. 
+The function *theme_SLU(palette, dark)* returns a theme that can be applied to a plot created with ggplot2. When the parameter *dark* is *TRUE* (the default) the theme will have a dark background and light foreground. Set *dark* to *FALSE* to get a light background and dark foreground. This function probably work best with the color based ("red", "green", "blue" or "yellow") themes.
 The goal of the theme is to get a plot that blends well with the official SLU templates for PowerPoint. Feedback on the design is welcome as I am a decent programmer and a lousy designer.
 
-```{r example3}
+```{r example3, fig.height=3, fig.width=5}
 library(ggplot2)
 p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length))
   

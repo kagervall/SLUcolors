@@ -17,3 +17,11 @@ a ggplot theme using SLU colors
 \description{
 SLU theme for ggplot2
 }
+\examples{
+library(ggplot2)
+p1 <- ggplot(iris, mapping = aes(x = Sepal.Width, y = Sepal.Length))
+
+p1 + labs(title = "Grey on green") +
+  geom_point(color = SLUpalette("grey")["Glimmer"]) +
+  theme_SLU("green")
+}
