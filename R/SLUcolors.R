@@ -4,7 +4,7 @@
 
 #' Function to extract SLU colors as hex codes
 #'
-#' @param ... Character names of drsimonj_colors
+#' @param ... Character names of SLU_colors
 #'
 SLU_cols <- function(...) {
   cols <- c(...)
