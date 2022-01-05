@@ -4,7 +4,7 @@
 \alias{scale_fill_SLU}
 \title{Fill scale constructor for SLU colors}
 \usage{
-scale_fill_SLU(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_SLU(palette = "all", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in SLU_palettes}

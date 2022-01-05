@@ -1,7 +1,7 @@
 Package: SLUcolors
 Type: Package
 Title: SLU Color Palettes
-Version: 0.1.0.9003
+Version: 0.2.0
 Author: Anders Kagervall
 Maintainer: Anders Kagervall <anders.kagervall@slu.se>
 Description: SLUcolors provides an easy way to access the officialy
@@ -17,7 +17,7 @@ Suggests:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)

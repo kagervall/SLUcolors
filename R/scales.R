@@ -11,9 +11,9 @@ scale_color_SLU <- function(palette = "all", discrete = TRUE, reverse = FALSE, .
   pal <- SLU_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    discrete_scale("colour", paste0("SLU_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("SLU_", palette), palette = pal, ...)
   } else {
-    scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradientn(colours = pal(256), ...)
   }
 }
 
@@ -30,8 +30,8 @@ scale_fill_SLU <- function(palette = "all", discrete = TRUE, reverse = FALSE, ..
   pal <- SLU_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    discrete_scale("fill", paste0("SLU_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("fill", paste0("SLU_", palette), palette = pal, ...)
   } else {
-    scale_fill_gradientn(colours = pal(256), ...)
+    ggplot2::scale_fill_gradientn(colours = pal(256), ...)
   }
 }

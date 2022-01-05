@@ -43,7 +43,7 @@ library(SLUcolors)
 
 # Get colomn from the palette = "Shades of color"
 reds <- SLUpalette("red") # Get a palette with 5 "Shades of red"
-reds # The retuned value is a (by default) named vector.
+reds # The returned value is a (by default) named vector.
 # Get rows from palette 
 row1 <- SLUpalette(1)
 row2 <- SLUpalette(2)

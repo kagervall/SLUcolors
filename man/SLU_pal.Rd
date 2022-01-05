@@ -4,14 +4,14 @@
 \alias{SLU_pal}
 \title{Return function to interpolate a SLU color palette}
 \usage{
-SLU_pal(pal = "all", reverse = FALSE, ...)
+SLU_pal(palette = "all", reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{Character name of palette in SLU_palettes}
+
 \item{reverse}{Boolean indicating whether the palette should be reversed}
 
 \item{...}{Additional arguments to pass to colorRampPalette()}
-
-\item{palette}{Character name of palette in SLU_palettes}
 }
 \description{
 Return function to interpolate a SLU color palette

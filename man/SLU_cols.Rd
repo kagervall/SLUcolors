@@ -7,7 +7,7 @@
 SLU_cols(...)
 }
 \arguments{
-\item{...}{Character names of drsimonj_colors}
+\item{...}{Character names of SLU_colors}
 }
 \description{
 Function to extract SLU colors as hex codes
