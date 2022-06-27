@@ -33,15 +33,22 @@ SLU_colors <- c(
                  blue = c(255, 214, 188, 141, 90, 0),
                  max = 255,
                  names = c("Snö", "Fjäder", "Glimmer", "Betong",
-                           "Titan", "Kol")))
+                           "Titan", "Kol"))),
+  rev(rgb(red = c(86, 0, 240, 0, 230, 213),
+          green = c(180, 158, 228, 114, 159, 94),
+          blue = c(233, 115, 66, 178, 0, 0),
+          max = 255,
+          names = c("Wong2", "Wong3", "Wong4", "Wong5", "Wong1", "Wong6")))
 )
+
 SLU_palettes <- list(
-  `all`  = SLU_cols(),
-  `red`  = SLU_cols("Druva", "Plommon", "Hallon", "Korall", "Aprikos"),
-  `green`   = SLU_cols("Skog", "Oliv", "Klorofyll", "Äpple", "Lindblom"),
-  `blue` = SLU_cols("Havsdjup", "Havsvik", "Turkos", "Himmel", "Duva"),
-  `yellow`  = SLU_cols("Choklad", "Kanel", "Kåda", "Majs", "Solsken"),
-  `grey`  = SLU_cols("Kol", "Titan", "Betong", "Glimmer", "Fjäder", "Snö")
+  `all`  = SLUcolors::SLU_cols(),
+  `red`  = SLUcolors::SLU_cols("Druva", "Plommon", "Hallon", "Korall", "Aprikos"),
+  `green`   = SLUcolors::SLU_cols("Skog", "Oliv", "Klorofyll", "Äpple", "Lindblom"),
+  `blue` = SLUcolors::SLU_cols("Havsdjup", "Havsvik", "Turkos", "Himmel", "Duva"),
+  `yellow`  = SLUcolors::SLU_cols("Choklad", "Kanel", "Kåda", "Majs", "Solsken"),
+  `grey`  = SLUcolors::SLU_cols("Kol", "Titan", "Betong", "Glimmer", "Fjäder", "Snö"),
+  `wong_234516` = SLUcolors::SLU_cols("Wong2", "Wong3", "Wong4", "Wong5", "Wong1", "Wong6")
 )
 
 usethis::use_data(SLU_colors, compress = "xz", overwrite = TRUE)
