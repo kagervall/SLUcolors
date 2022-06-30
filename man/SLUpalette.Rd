@@ -7,7 +7,8 @@
 SLUpalette(palette, color_names = TRUE)
 }
 \arguments{
-\item{palette}{character or numeric defining the desired color palette}
+\item{palette}{character or numeric defining the desired color palette. Allowed values  "all", "red",
+"green", "blue", "yellow" and "grey" or a number 1:5.}
 
 \item{color_names}{logical return named vector or not. Default TRUE}
 }

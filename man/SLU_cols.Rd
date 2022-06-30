@@ -7,7 +7,7 @@
 SLU_cols(...)
 }
 \arguments{
-\item{...}{Character names of SLU_colors}
+\item{...}{Character names of SLU_colors if NULL all colors from the official SLU color guide are returned.}
 }
 \description{
 Function to extract SLU colors as hex codes
