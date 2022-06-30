@@ -51,5 +51,7 @@ SLU_palettes <- list(
   `wong_234516` = SLUcolors::SLU_cols("Wong2", "Wong3", "Wong4", "Wong5", "Wong1", "Wong6")
 )
 
-usethis::use_data(SLU_colors, compress = "xz", overwrite = TRUE)
-usethis::use_data(SLU_palettes, compress = "xz", overwrite = TRUE)
+usethis::use_data(SLU_colors,SLU_palettes, internal = TRUE, compress = "xz", overwrite = TRUE)
+
+#usethis::use_data(SLU_colors, compress = "xz", overwrite = TRUE)
+#usethis::use_data(SLU_palettes, compress = "xz", overwrite = TRUE)
