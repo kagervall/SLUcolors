@@ -1,23 +1,21 @@
 Package: SLUcolors
 Type: Package
 Title: SLU Color Palettes
-Version: 0.2.0
+Version: 0.3.0
 Author: Anders Kagervall
 Maintainer: Anders Kagervall <anders.kagervall@slu.se>
 Description: SLUcolors provides an easy way to access the officialy
     defined colors that should be used when you create communication
-    (PowerPoint, fact sheets, etc.) in SLU. This first alpha-version
-    provides a function  SLUpalette(name) that will return a color
-    palette. The parameter "name" must be one of the strings "red",
-    "green", "blue", "yellow" or "all".
+    (PowerPoint, fact sheets, etc.) in SLU.
 Suggests:
     ggplot2,
+    colorspace,
     knitr,
     rmarkdown
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
