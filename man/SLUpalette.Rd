@@ -2,13 +2,15 @@
 % Please edit documentation in R/SLUcolors.R
 \name{SLUpalette}
 \alias{SLUpalette}
-\title{Get different variants of color palettes containing official SLU colors}
+\title{Get different variants of color palettes containing official SLU colors. Also avaliable is the "wong_234516"
+palette with non SLU colors but adapted to colorblindness. "wong_234516" will be deprecated if/when a similar
+and official palette becomes available.}
 \usage{
 SLUpalette(palette, color_names = TRUE)
 }
 \arguments{
 \item{palette}{character or numeric defining the desired color palette. Allowed values  "all", "red",
-"green", "blue", "yellow" and "grey" or a number 1:5.}
+"green", "blue", "yellow", "grey" and "wong_234516" or a number 1:5.}
 
 \item{color_names}{logical return named vector or not. Default TRUE}
 }
