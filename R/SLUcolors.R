@@ -11,9 +11,9 @@ SLU_cols <- function(...) {
   cols <- c(...)
 
   if (is.null(cols))
-    return (SLUcolors::SLU_colors[1:26]) # Return first 26 colors (the official SLU colors)
+    return (SLU_colors[1:26]) # Return first 26 colors (the official SLU colors)
 
-  return(SLUcolors::SLU_colors[cols])
+  return(SLU_colors[cols])
 }
 
 
@@ -28,12 +28,12 @@ SLU_pal <- function(palette = "all", reverse = FALSE, ...) {
   UseMethod("SLU_pal")
 }
 #' @export
-SLU_pal.default <- function(palette, reverse = FALSE) {
+SLU_pal.default <- function(palette, reverse = FALSE, ...) {
   stop('Parameter "palette" must be character or numeric')
 }
 #' @export
 SLU_pal.character <- function(palette = "all", reverse = FALSE, ...) {
-  res <- SLUcolors:::SLU_palettes[[palette]]
+  res <- SLU_palettes[[palette]]
   if (reverse)
     res <- rev(res)
   grDevices::colorRampPalette(res, ...)
@@ -43,7 +43,7 @@ SLU_pal.numeric <- function(palette = "all", reverse = FALSE, ...) {
   if (!is.integer(palette) & (palette < 1 | palette > 5) ) {
     stop('Numeric palette must be an integer between 1 and 5')
   }
-  pall <- SLUcolors:::SLU_palettes[["all"]]
+  pall <- SLU_palettes[["all"]]
   res <- pall[seq(from = palette, by = 5, length.out = 5)]
   if (reverse)
     res <- rev(res)
@@ -83,10 +83,10 @@ SLUpalette.default <- function(palette, color_names) {
 
 #' @export
 SLUpalette.character  <- function(palette, color_names = TRUE) {
-  if (!palette %in% names(SLUcolors:::SLU_palettes)) {
-    stop('Unknown color palette "',palette, '" must be one of ', paste(names(SLUcolors:::SLU_palettes), collape = " "))
+  if (!palette %in% names(SLU_palettes)) {
+    stop('Unknown color palette "',palette, '" must be one of ', paste(names(SLU_palettes), collape = " "))
   }
-  pal <- SLUcolors:::SLU_palettes[[palette]]
+  pal <- SLU_palettes[[palette]]
   if (!color_names) {
     names(pal) <- NULL
   }
@@ -99,7 +99,7 @@ SLUpalette.numeric <- function(palette, color_names = TRUE) {
     stop('Numeric palette must be an integer between 1 and 5')
   }
 #  pall <- SLUpalette.character("all")
-  pall <- SLUcolors:::SLU_palettes[["all"]]
+  pall <- SLU_palettes[["all"]]
   pal <- pall[seq(from = palette, by = 5, length.out = 5)]
   if (!color_names) {
     names(pal) <- NULL
