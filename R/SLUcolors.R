@@ -51,13 +51,15 @@ SLU_pal.numeric <- function(palette = "all", reverse = FALSE, ...) {
   grDevices::colorRampPalette(res, ...)
 }
 
-#' Get different variants of color palettes containing official SLU colors
+#' Get different variants of color palettes containing official SLU colors. Also avaliable is the "wong_234516"
+#' palette with non SLU colors but adapted to colorblindness. "wong_234516" will be deprecated if/when a similar
+#' and official palette becomes available.
 #'
 #' \code{SLUpalette(palette)} returns different variants of the official SLU color palette.
 #'
 #'
 #' @param palette character or numeric defining the desired color palette. Allowed values  "all", "red",
-#'  "green", "blue", "yellow" and "grey" or a number 1:5.
+#'  "green", "blue", "yellow", "grey" and "wong_234516" or a number 1:5.
 #' @param color_names logical return named vector or not. Default TRUE
 #'
 #' @return a named vector of color specifications.

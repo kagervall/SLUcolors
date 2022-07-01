@@ -5,3 +5,5 @@ sheets, etc.) in SLU. This first alpha-version provides a function
 SLUpalette(palette) that will return a color palette. The parameter
 "palette" must be one of the strings "red", "green", "blue", "yellow" or
 "all" or an integer between 1 and 5.
+
+To install try remotes::install_github("kagervall/SLUcolors", build_vignettes = TRUE)

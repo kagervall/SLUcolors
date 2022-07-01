@@ -22,7 +22,7 @@ the SLU color palette can give a coherant SLU-look presentations, fact-sheets an
 especially combined with official templates for PowerPoint etc. For more info see [https://internt.slu.se/en/support-services/administrative-support/communication/brand-guidelines/visual-identity/slu-colours/palette/](https://internt.slu.se/en/support-services/administrative-support/communication/brand-guidelines/visual-identity/slu-colours/palette/)
 
 # Installation
-The easiest way to install package *SLUcolors* is to use *install_github()* from package *remotes*.
+The easiest way to install package *SLUcolors* is to use *remotes::install_github("kagervall/SLUcolors", build_vignettes = TRUE)* from package *remotes*.
 ```{r install, eval=FALSE}
 if (!require(remotes)) {
   install.packages(remotes)
