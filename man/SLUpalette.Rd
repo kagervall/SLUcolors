@@ -2,9 +2,7 @@
 % Please edit documentation in R/SLUcolors.R
 \name{SLUpalette}
 \alias{SLUpalette}
-\title{Get different variants of color palettes containing official SLU colors. Also avaliable is the "wong_234516"
-palette with non SLU colors but adapted to colorblindness. "wong_234516" will be deprecated if/when a similar
-and official palette becomes available.}
+\title{Work with SLU colors}
 \usage{
 SLUpalette(palette, color_names = TRUE)
 }
@@ -18,6 +16,11 @@ SLUpalette(palette, color_names = TRUE)
 a named vector of color specifications.
 }
 \description{
+Get different variants of color palettes containing official SLU colors. Also avaliable is the "wong_234516"
+palette with non SLU colors but adapted to colorblindness. "wong_234516" will be deprecated if/when a similar
+and official palette becomes available.
+}
+\details{
 \code{SLUpalette(palette)} returns different variants of the official SLU color palette.
 }
 \examples{

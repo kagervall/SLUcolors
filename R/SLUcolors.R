@@ -51,6 +51,8 @@ SLU_pal.numeric <- function(palette = "all", reverse = FALSE, ...) {
   grDevices::colorRampPalette(res, ...)
 }
 
+#' Work with SLU colors
+#'
 #' Get different variants of color palettes containing official SLU colors. Also avaliable is the "wong_234516"
 #' palette with non SLU colors but adapted to colorblindness. "wong_234516" will be deprecated if/when a similar
 #' and official palette becomes available.
